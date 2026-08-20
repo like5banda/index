@@ -13,11 +13,40 @@ document
     e.preventDefault();
 
     const dados = {
-      nome: document.getElementById("nome").value,
-      telefone: document.getElementById("telefone").value,
-      tipo_evento: document.getElementById("tipo_evento").value,
-      data_evento: document.getElementById("data_evento").value
-    };
+  nome: document.getElementById("nome").value,
+  telefone: document.getElementById("telefone").value,
+  tipo_evento: document.getElementById("tipo_evento").value,
+  data_evento: document.getElementById("data_evento").value,
+
+  horario_inicio:
+    document.getElementById("horario_inicio").value,
+
+  horario_fim:
+    document.getElementById("horario_fim").value,
+
+  duracao_show:
+    document.getElementById("duracao_show").value,
+
+  cidade:
+    document.getElementById("cidade").value,
+
+  endereco:
+    document.getElementById("endereco").value,
+
+  sonorizacao:
+    document.getElementById("sonorizacao").checked,
+
+  descricao_som:
+    document.getElementById("descricao_som").value,
+
+  qnt_pessoas:
+    parseInt(
+      document.getElementById("qnt_pessoas").value || 0
+    ),
+
+  aberto_fechado:
+    document.getElementById("aberto_fechado").value
+};
 
     dados["e-mail"] =
       document.getElementById("email").value;
