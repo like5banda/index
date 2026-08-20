@@ -82,7 +82,46 @@
   <input type="time"
        id="horario_inicio"
        style="width:100%;padding:10px;margin:8px 0;">
+  <input type="time"
+       id="horario_fim"
+       style="width:100%;padding:10px;margin:8px 0;">
 
+<input type="text"
+       id="duracao_show"
+       placeholder="Duração do Show"
+       style="width:100%;padding:10px;margin:8px 0;">
+
+<input type="text"
+       id="cidade"
+       placeholder="Cidade"
+       style="width:100%;padding:10px;margin:8px 0;">
+
+<input type="text"
+       id="endereco"
+       placeholder="Endereço do Evento"
+       style="width:100%;padding:10px;margin:8px 0;">
+
+<label style="display:block;margin:10px 0;">
+  <input type="checkbox" id="sonorizacao">
+  Necessita Sonorização?
+</label>
+
+<textarea
+       id="descricao_som"
+       placeholder="Descreva a necessidade de sonorização"
+       style="width:100%;padding:10px;margin:8px 0;height:100px;"></textarea>
+
+<input type="number"
+       id="qnt_pessoas"
+       placeholder="Quantidade de Pessoas"
+       style="width:100%;padding:10px;margin:8px 0;">
+
+<select id="aberto_fechado"
+        style="width:100%;padding:10px;margin:8px 0;">
+  <option value="">Local Aberto ou Fechado?</option>
+  <option value="Aberto">Aberto</option>
+  <option value="Fechado">Fechado</option>
+</select>
   <button type="submit"
           class="btn btn-primary">
       Enviar Orçamento
