@@ -11,7 +11,19 @@ document
   .addEventListener("submit", async (e) => {
 
     e.preventDefault();
+const cidadeSelecionada =
+  document.getElementById("cidade").value;
 
+const { data: cidadeInfo, error: cidadeErro } =
+  await supabaseClient
+    .from("cidades_mg")
+    .select("distancia_bh")
+    .eq("cidade", cidadeSelecionada)
+    .single();
+
+if (cidadeErro) {
+  console.error(cidadeErro);
+}
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
@@ -29,6 +41,9 @@ document
 
   cidade:
     document.getElementById("cidade").value,
+  
+  distancia_bh:
+  cidadeInfo?.distancia_bh || 0,
 
   endereco:
     document.getElementById("endereco").value,
