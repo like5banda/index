@@ -42,7 +42,7 @@ document
     ),
 
   aberto_fechado:
-  document.getElementById("aberto_fechado").value === "Fechado"
+  document.getElementById("aberto_fechado").value
 };
 
     dados["e-mail"] =
