@@ -27,6 +27,13 @@ if (cidadeErro) {
 console.log("Cidade selecionada:", cidadeSelecionada);
 console.log("Cidade encontrada:", cidadeInfo);
 console.log("Erro cidade:", cidadeErro);
+    const distancia = cidadeInfo?.distancia_bh || 0;
+
+    const sonorizacao =
+    document.getElementById("sonorizacao").checked;
+
+    const valorDeslocamento =
+    sonorizacao ? distancia * 3.0 : distancia * 1.5;
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
@@ -47,6 +54,9 @@ console.log("Erro cidade:", cidadeErro);
   
   distancia_bh:
   cidadeInfo?.distancia_bh || 0,
+
+  valor_deslocamento:
+  valorDeslocamento,
 
   endereco:
     document.getElementById("endereco").value,
