@@ -177,10 +177,32 @@
 </select>
  
 
-<input type="text"
-       id="duracao_show"
-       placeholder="Duração do Show"
-       style="width:100%;padding:10px;margin:8px 0;">
+<label style="color:white;font-weight:bold;display:block;margin-top:10px;">
+  Duração do Show
+</label>
+
+<select id="duracao_show"
+        style="width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none;">
+
+  <option value="">Selecione...</option>
+
+  <option value="01:00">
+    1 hora
+  </option>
+
+  <option value="01:30">
+    1 hora e 30 minutos
+  </option>
+
+  <option value="02:00">
+    2 horas
+  </option>
+
+  <option value="02:30">
+    2 horas e 30 minutos (com intervalo)
+  </option>
+
+</select>
 
 <input type="text"
        id="cidade"
