@@ -204,10 +204,25 @@
 
 </select>
 
-<input type="text"
-       id="cidade"
-       placeholder="Cidade"
-       style="width:100%;padding:10px;margin:8px 0;">
+<label style="color:white;font-weight:bold;display:block;margin-top:10px;">
+  Cidade do Evento
+</label>
+
+<select id="cidade"
+        style="width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none;">
+
+  <option value="">Carregando cidades...</option>
+
+</select>
+
+<div id="cidadeOutraDiv" style="display:none;">
+
+  <input type="text"
+         id="cidadeOutra"
+         placeholder="Digite a cidade"
+         style="width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none;">
+
+</div>
 
 <input type="text"
        id="endereco"
