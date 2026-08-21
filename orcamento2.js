@@ -72,7 +72,7 @@ console.log("Erro cidade:", cidadeErro);
   aberto_fechado:
   document.getElementById("aberto_fechado").value,
 };
-
+  console.log("Dados enviados:", dados);
     dados["e-mail"] =
       document.getElementById("email").value;
 
