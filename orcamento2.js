@@ -79,3 +79,16 @@ chkSonorizacao.addEventListener("change", () => {
   }
 
 });
+  document
+  .getElementById("btnLimpar")
+  .addEventListener("click", () => {
+
+    document
+      .getElementById("orcamentoForm")
+      .reset();
+
+    document
+      .getElementById("camposSonorizacao")
+      .style.display = "none";
+
+});
