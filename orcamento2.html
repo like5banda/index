@@ -47,11 +47,19 @@
   <main>
     <section class="orcamento-section" style="padding:8rem 0;min-height:70vh;display:flex;align-items:center;">
       <div class="container" style="display:flex;justify-content:center;">
-        <div style="width:100%;max-width:920px;background:#fff;border-radius:16px;overflow:hidden;padding:12px;">
+        <div style="width:100%;max-width:920px;background:rgba(0,0,0,0.60);backdrop-filter:blur(6px);border-radius:16px;overflow:hidden;padding:20px;">
           <!-- Card branco com iframe -->
 <form id="orcamentoForm">
 
-  <h2>Solicitação de Orçamento</h2>
+  <h2 style="
+    color:white;
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:20px;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.7);
+    ">
+    Solicitação de Orçamento
+    </h2>
 
   <input type="text"
          id="nome"
@@ -81,9 +89,11 @@
          style="width:100%;padding:10px;margin:8px 0;">
   <input type="time"
        id="horario_inicio"
+       step="1800"
        style="width:100%;padding:10px;margin:8px 0;">
   <input type="time"
        id="horario_fim"
+       step="1800"
        style="width:100%;padding:10px;margin:8px 0;">
 
 <input type="text"
@@ -101,10 +111,17 @@
        placeholder="Endereço do Evento"
        style="width:100%;padding:10px;margin:8px 0;">
 
-<label style="display:block;margin:10px 0;color:#333;font-weight:bold;">
-  <input type="checkbox" id="sonorizacao">
-  Necessita Sonorização?
-</label>
+<label style="
+  display:block;
+  margin:15px 0;
+  color:white;
+  font-weight:bold;
+  font-size:1.1rem;
+  text-shadow:2px 2px 4px rgba(0,0,0,0.7);
+  ">
+    <input type="checkbox" id="sonorizacao">
+    Necessita Sonorização?
+  </label>
  
 <div id="camposSonorizacao" style="display:none;">
   <input type="number"
@@ -128,7 +145,7 @@
 <button type="button"
         id="btnLimpar"
         class="btn btn-instagram"
-        style="margin-left:10px;">
+        style="margin-left:10px;color:white;">
     Limpar Tudo
 </button>
 
