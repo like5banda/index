@@ -79,10 +79,15 @@
          required
          style="width:100%;padding:10px;margin:8px 0;">
 
-  <input type="text"
-         id="tipo_evento"
-         placeholder="Tipo do Evento"
-         style="width:100%;padding:10px;margin:8px 0;">
+  <select id="tipo_evento" name="tipo_evento" required>
+    <option value="">Selecione o tipo de evento</option>
+    <option value="Evento de rua">Evento de rua</option>
+    <option value="Casamento">Casamento</option>
+    <option value="15 anos">15 anos</option>
+    <option value="Aniversário">Aniversário</option>
+    <option value="Formatura">Formatura</option>
+    <option value="Pub/Casa noturna">Pub/Casa noturna</option>
+</select>
 
   <label style="color:white;font-weight:bold;display:block;margin-top:10px;">
   Data do Evento
