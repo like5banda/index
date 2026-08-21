@@ -42,7 +42,7 @@ document
     ),
 
   aberto_fechado:
-  "TESTE_ABERTO_FECHADO",
+  document.getElementById("aberto_fechado").value,
 };
 
     dados["e-mail"] =
