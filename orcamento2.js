@@ -33,7 +33,7 @@ console.log("Erro cidade:", cidadeErro);
     document.getElementById("sonorizacao").checked;
 
     const valorDeslocamento =
-    sonorizacao ? distancia * 3.0 : distancia * 1.5;
+    sonorizacao ? distancia * 6.0 : distancia * 3.0;
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
