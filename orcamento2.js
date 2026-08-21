@@ -26,6 +26,7 @@ if (cidadeErro) {
 }
 console.log("Cidade selecionada:", cidadeSelecionada);
 console.log("Cidade encontrada:", cidadeInfo);
+console.log("Erro cidade:", cidadeErro);
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
