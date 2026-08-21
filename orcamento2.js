@@ -36,10 +36,7 @@ document
   sonorizacao:
     document.getElementById("sonorizacao").checked,
 
-  descricao_som:
-    document.getElementById("descricao_som").value,
-
-  qnt_pessoas:
+    qnt_pessoas:
     parseInt(
       document.getElementById("qnt_pessoas").value || 0
     ),
