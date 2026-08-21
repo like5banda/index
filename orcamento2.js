@@ -24,6 +24,8 @@ const { data: cidadeInfo, error: cidadeErro } =
 if (cidadeErro) {
   console.error(cidadeErro);
 }
+console.log("Cidade selecionada:", cidadeSelecionada);
+console.log("Cidade encontrada:", cidadeInfo);
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
