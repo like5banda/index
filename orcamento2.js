@@ -67,3 +67,18 @@ document
       .getElementById("orcamentoForm")
       .reset();
 });
+  const chkSonorizacao =
+  document.getElementById("sonorizacao");
+
+const camposSonorizacao =
+  document.getElementById("camposSonorizacao");
+
+chkSonorizacao.addEventListener("change", () => {
+
+  if (chkSonorizacao.checked) {
+    camposSonorizacao.style.display = "block";
+  } else {
+    camposSonorizacao.style.display = "none";
+  }
+
+});
