@@ -92,3 +92,61 @@ chkSonorizacao.addEventListener("change", () => {
       .style.display = "none";
 
 });
+  async function carregarCidades() {
+
+  const { data, error } = await supabaseClient
+    .from("cidades_mg")
+    .select("cidade")
+    .order("cidade");
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  const cidadeSelect =
+    document.getElementById("cidade");
+
+  cidadeSelect.innerHTML =
+    '<option value="">Selecione a cidade...</option>';
+
+  cidadeSelect.innerHTML +=
+    '<option value="Belo Horizonte">Belo Horizonte</option>';
+
+  data.forEach(item => {
+
+    if (item.cidade === "Belo Horizonte") {
+      return;
+    }
+
+    cidadeSelect.innerHTML +=
+      `<option value="${item.cidade}">
+        ${item.cidade}
+      </option>`;
+
+  });
+
+  cidadeSelect.innerHTML +=
+    '<option value="Outra cidade">Outra cidade (fora de MG)</option>';
+
+}
+
+carregarCidades();
+
+document
+  .getElementById("cidade")
+  .addEventListener("change", () => {
+
+    const cidadeSelecionada =
+      document.getElementById("cidade").value;
+
+    const cidadeOutraDiv =
+      document.getElementById("cidadeOutraDiv");
+
+    if (cidadeSelecionada === "Outra cidade") {
+      cidadeOutraDiv.style.display = "block";
+    } else {
+      cidadeOutraDiv.style.display = "none";
+    }
+
+});
