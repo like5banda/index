@@ -75,12 +75,10 @@
 
   <input type="tel"
        id="telefone"
-       placeholder="(31)99999-9999"
-       maxlength="14"
-       pattern="\(\d{2}\)\d{5}-\d{4}"
+       placeholder="Telefone"
        required
-       oninput="mascaraTelefone(this)"
-       style="width:100%;padding:10px;margin:8px 0;">
+       onblur="formatarTelefone(this)"
+       style="width:100%;padding
 
   <select
       2
