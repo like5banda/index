@@ -34,6 +34,15 @@ console.log("Erro cidade:", cidadeErro);
 
     const valorDeslocamento =
     sonorizacao ? distancia * 6.0 : distancia * 3.0;
+    const telefone =
+        document.getElementById("telefone").value;
+      
+      const regexTelefone = /^\(\d{2}\)\d{5}-\d{4}$/;
+      
+      if (!regexTelefone.test(telefone)) {
+        alert("Digite o telefone no formato (XX)XXXXX-XXXX");
+        return;
+      }
     const dados = {
   nome: document.getElementById("nome").value,
   telefone: document.getElementById("telefone").value,
