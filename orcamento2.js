@@ -187,3 +187,11 @@ document
     }
 
 });
+function formatarTelefone(campo) {
+  let valor = campo.value.replace(/\D/g, '');
+
+  if (valor.length === 11) {
+    campo.value =
+      `(${valor.substring(0,2)})${valor.substring(2,7)}-${valor.substring(7,11)}`;
+  }
+}
