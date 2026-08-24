@@ -73,11 +73,14 @@
          required
          style="width:100%;padding:10px;margin:8px 0;">
 
-  <input type="text"
-         id="telefone"
-         placeholder="Telefone"
-         required
-         style="width:100%;padding:10px;margin:8px 0;">
+  <input type="tel"
+       id="telefone"
+       placeholder="(31)99999-9999"
+       maxlength="14"
+       pattern="\(\d{2}\)\d{5}-\d{4}"
+       required
+       oninput="mascaraTelefone(this)"
+       style="width:100%;padding:10px;margin:8px 0;">
 
   <select
       2
@@ -309,7 +312,14 @@
       .nav-toggle{display:none !important}
     </style>
   </noscript>
+function mascaraTelefone(campo) {
+  let valor = campo.value.replace(/\D/g, '');
 
+  valor = valor.replace(/^(\d{2})(\d)/g, '($1)$2');
+  valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+  campo.value = valor;
+}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="orcamento2.js" defer></script>
