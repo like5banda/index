@@ -119,7 +119,7 @@ document
         'dados_preenchidos',
     };
 
-    const { error } = await supabase
+    const { error } = await supabaseClient
       .from('Contratos')
       .update(dados)
       .eq('id', contratoId);
