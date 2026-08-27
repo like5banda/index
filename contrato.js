@@ -11,6 +11,30 @@ const params = new URLSearchParams(
 );
 
 const contratoId = params.get('id');
+carregarContrato();
+
+async function carregarContrato() {
+
+  const { data, error } = await supabase
+    .from('Contratos')
+    .select('*')
+    .eq('id', contratoId)
+    .single();
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  document.getElementById('nome_completo').value =
+    data.nome_completo || '';
+
+  document.getElementById('telefone').value =
+    data.telefone || '';
+
+  document.getElementById('email').value =
+    data.email || '';
+}
 
 document
   .getElementById('contratoForm')
