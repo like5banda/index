@@ -11,6 +11,7 @@ const params = new URLSearchParams(
 );
 
 const contratoId = params.get('id');
+console.log('ID recebido:', contratoId);
 carregarContrato();
 
 async function carregarContrato() {
