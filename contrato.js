@@ -142,3 +142,11 @@ document
 
     msg.style.color = 'lime';
   });
+document.getElementById('contratoForm')
+  .addEventListener('submit', async function(e) {
+
+    e.preventDefault();
+
+    console.log('Botão Enviar clicado');
+
+});
