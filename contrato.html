@@ -260,7 +260,7 @@
       .nav-toggle{display:none !important}
     </style>
   </noscript>
-function mascaraTelefone(campo) {
+<script>function mascaraTelefone(campo) {
   let valor = campo.value.replace(/\D/g, '');
 
   valor = valor.replace(/^(\d{2})(\d)/g, '($1)$2');
@@ -300,7 +300,7 @@ function mascaraCEP(campo) {
   );
 
   campo.value = valor;
-}
+}</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="contrato.js" defer></script>
