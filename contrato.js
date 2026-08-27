@@ -2,8 +2,8 @@ const supabaseUrl = "https://gemossrqtraurvgixzcp.supabase.co";
 const supabaseKey = "sb_publishable_DazWVji8SXXLbd61i8WL4A_cDEwKZ2v";
 
 const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
+  'https://gemossrqtraurvgixzcp.supabase.co',
+  'sb_publishable_DazWVji8SXXLbd61i8WL4A_cDEwKZ2v'
 );
 
 const params = new URLSearchParams(
