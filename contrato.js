@@ -1,7 +1,7 @@
 const supabaseUrl = "https://gemossrqtraurvgixzcp.supabase.co";
 const supabaseKey = "sb_publishable_DazWVji8SXXLbd61i8WL4A_cDEwKZ2v";
 
-const supabase = window.supabase.createClient(
+const supabaseClient = window.supabase.createClient(
   'https://gemossrqtraurvgixzcp.supabase.co',
   'sb_publishable_DazWVji8SXXLbd61i8WL4A_cDEwKZ2v'
 );
@@ -16,7 +16,7 @@ carregarContrato();
 
 async function carregarContrato() {
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('Contratos')
     .select('*')
     .eq('id', contratoId)
